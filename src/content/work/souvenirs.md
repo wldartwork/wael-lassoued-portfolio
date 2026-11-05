@@ -13,7 +13,6 @@ images:
   - "./souvenirs/05.jpg"
   - "./souvenirs/06.jpg"
   - "./souvenirs/07.jpg"
-  - "./souvenirs/08.jpg"
 draft: false
 ---
 
