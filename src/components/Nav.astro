@@ -1,0 +1,17 @@
+---
+import { site } from '../site';
+---
+
+<header class="nav">
+  <nav class="nav-grid" aria-label="Navigation principale">
+    <a class="nav-brand" href="/">Portfolio</a>
+    <div class="nav-col">
+      {site.nav.map((item) => <a href={item.href}>{item.label}</a>)}
+    </div>
+    <div class="nav-col">
+      <a href={site.instagram} target="_blank" rel="noopener">Instagram</a>
+      <a href={`mailto:${site.email}`}>Contact</a>
+    </div>
+    <div class="nav-right">{site.location}</div>
+  </nav>
+</header>

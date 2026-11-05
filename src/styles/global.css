@@ -1,0 +1,164 @@
+/* ============================================================
+   WAEL LASSOUED · PORTFOLIO
+   Feuille de style globale (portée depuis le code custom Webflow)
+   ============================================================ */
+
+/* ---------- RÉGLAGES ---------- */
+:root {
+  --wl-cols: 2;              /* colonnes de la grille d'accueil */
+  --wl-ratio: 1 / 1;         /* format des vignettes d'accueil (1/1, 4/5, 3/2...) */
+  --wl-gap: 40px 32px;       /* espace entre les vignettes (vertical horizontal) */
+  --wl-top: 110px;           /* hauteur à laquelle la colonne de texte se fixe (sous la nav) */
+  --wl-split: 1fr 1fr;       /* largeur colonnes page projet : images / texte */
+  --wl-label: 12px;          /* taille des petits textes en capitales */
+  --wl-muted: #8a8a8a;       /* gris des infos secondaires */
+  --wl-ink: #111;            /* couleur du texte */
+  --wl-paper: #fff;          /* couleur de fond */
+  --wl-pad: 24px;            /* marge intérieure du site */
+  --wl-font: 'Inter Variable', Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* ---------- BASE ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  padding-top: var(--wl-top);
+  background: var(--wl-paper);
+  color: var(--wl-ink);
+  font-family: var(--wl-font);
+  font-size: var(--wl-label);
+  line-height: 1.6;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+a:hover { color: var(--wl-muted); }
+img { display: block; max-width: 100%; height: auto; }
+h1, h2, h3, p { margin: 0; font-size: inherit; font-weight: inherit; line-height: inherit; }
+.container { padding: 0 var(--wl-pad); }
+.muted { color: var(--wl-muted); }
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
+
+/* ---------- NAVIGATION ---------- */
+.nav {
+  position: fixed; inset: 0 0 auto 0; z-index: 10;
+  background: var(--wl-paper);
+  padding: var(--wl-pad) var(--wl-pad) 0;
+}
+.nav-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0 24px;
+  align-items: start;
+}
+.nav-brand { font-weight: 700; }
+.nav-col a { display: block; }
+.nav-right { text-align: right; }
+
+/* ---------- ACCUEIL : grille d'images de couverture ---------- */
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(var(--wl-cols), minmax(0, 1fr));
+  gap: var(--wl-gap);
+  list-style: none; margin: 0; padding: 0;
+}
+.work-card { display: block; }
+.work-cover {
+  width: 100%;
+  aspect-ratio: var(--wl-ratio);
+  object-fit: cover;
+  background: #f2f2f2;
+  transition: opacity .25s ease;
+}
+.work-card:hover .work-cover { opacity: .88; }
+.work-card:hover { color: inherit; }
+.work-meta {
+  display: flex; flex-wrap: wrap; gap: 0 .6em;
+  padding-top: 12px;
+}
+.work-meta .work-title::before { content: "[ "; }
+.work-meta .work-title::after { content: " ]"; }
+.work-meta .work-service { color: var(--wl-muted); }
+.work-meta .work-year::before { content: "( "; }
+.work-meta .work-year::after { content: " )"; }
+
+/* ---------- PAGE PROJET : images à gauche, texte fixe à droite ---------- */
+.wl-section { padding-top: 24px; }
+.wl-wrap {
+  display: grid;
+  grid-template-columns: var(--wl-split);
+  gap: 0 48px;
+  align-items: start;
+}
+.wl-images { min-width: 0; }
+.wl-fig { position: relative; margin: 0 0 24px; scroll-margin-top: var(--wl-top); }
+.wl-fig:last-child { margin-bottom: 0; }
+.wl-fig img { width: 100%; height: auto; background: #f2f2f2; }
+.wl-num {
+  display: block; margin: 0 0 6px;
+  font-size: 11px; line-height: 1; letter-spacing: .04em; color: var(--wl-muted);
+  font-variant-numeric: tabular-nums;
+}
+.wl-info { position: sticky; top: var(--wl-top); min-width: 0; }
+.wl-close { display: block; text-align: right; margin-bottom: 24px; }
+.wl-thumbs {
+  display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none;
+  margin: 0 0 24px; padding: 0 0 2px; list-style: none;
+}
+.wl-thumbs::-webkit-scrollbar { display: none; }
+.wl-thumb {
+  flex: 0 0 auto; width: 56px; height: 56px; display: block;
+  opacity: .45; transition: opacity .2s; cursor: pointer;
+}
+.wl-thumb img { width: 56px; height: 56px; object-fit: cover; }
+.wl-thumb:hover, .wl-thumb.is-active { opacity: 1; }
+.wl-title { display: flex; flex-wrap: wrap; gap: 0 .6em; margin-bottom: 16px; font-weight: 500; }
+.wl-title h1::before { content: "[ "; }
+.wl-title h1::after { content: " ]"; }
+.wl-title .wl-service::before { content: "( "; }
+.wl-title .wl-service::after { content: " )"; }
+.wl-summary { max-width: 52ch; margin: 0 0 20px; }
+.wl-summary p + p { margin-top: 1em; }
+.wl-details { margin: 0 0 28px; }
+.wl-detail { display: flex; gap: .6em; padding: 4px 0; }
+.wl-detail dt { color: var(--wl-muted); }
+.wl-detail dd { margin: 0; }
+.wl-next { display: inline-block; margin-top: 8px; }
+
+/* ---------- PAGE À PROPOS ---------- */
+.about-wrap {
+  display: grid; grid-template-columns: var(--wl-split); gap: 0 48px; align-items: start;
+  padding-top: 24px;
+}
+.about-text { max-width: 52ch; }
+.about-text p + p { margin-top: 1em; }
+.about-list { list-style: none; margin: 24px 0 0; padding: 0; }
+.about-list li { display: flex; gap: .6em; padding: 4px 0; }
+
+/* ---------- PIED DE PAGE ---------- */
+.footer { padding: 96px var(--wl-pad) var(--wl-pad); }
+.footer-grid { display: flex; justify-content: space-between; gap: 24px; }
+.footer-links { display: flex; gap: 16px; }
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 767px) {
+  :root { --wl-top: 24px; }
+  body { padding-top: 0; }
+  .nav { position: static; padding-bottom: 32px; }        /* nav dans le flux sur mobile, pas de chevauchement */
+  .nav-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 16px; }
+  .nav-right { grid-column: 2; text-align: right; }
+  .work-grid { grid-template-columns: 1fr; gap: 28px; }
+  .wl-wrap { display: flex; flex-direction: column; gap: 24px; }
+  .wl-info { position: static; order: 0; }
+  .wl-images { order: 1; }
+  .wl-thumbs, .wl-num { display: none; }
+  .wl-close { text-align: left; }
+  .about-wrap { grid-template-columns: 1fr; gap: 24px; }
+  .footer { padding-top: 64px; }
+  .footer-grid { flex-direction: column; }
+}

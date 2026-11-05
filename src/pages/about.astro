@@ -1,0 +1,29 @@
+---
+import Base from '../layouts/Base.astro';
+import { site } from '../site';
+---
+
+<Base title="About" description={site.description}>
+  <section class="about-wrap" id="top">
+    <div class="wl-title">
+      <h1>{site.name}</h1>
+      <span class="wl-service">Art direction</span>
+    </div>
+    <div class="about-text">
+      <!-- Texte provisoire : à remplacer par ta bio -->
+      <p>
+        Directeur artistique freelance basé à {site.location}. Identité visuelle, web design et contenu
+        social media pour des marques qui veulent une image nette.
+      </p>
+      <p>Disponible pour de nouveaux projets.</p>
+      <ul class="about-list">
+        <li><span class="muted">Mail:</span><a href={`mailto:${site.email}`}>{site.email}</a></li>
+        <li>
+          <span class="muted">Instagram:</span>
+          <a href={site.instagram} target="_blank" rel="noopener">@wael.lassoued</a>
+        </li>
+        <li><span class="muted">Studio:</span><span>{site.location}</span></li>
+      </ul>
+    </div>
+  </section>
+</Base>
