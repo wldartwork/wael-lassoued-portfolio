@@ -16,8 +16,6 @@ images:
   - "./stil-park/08.jpg"
   - "./stil-park/09.jpg"
   - "./stil-park/10.jpg"
-  - "./stil-park/11.jpg"
-  - "./stil-park/12.jpg"
 draft: false
 ---
 
