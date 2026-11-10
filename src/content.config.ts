@@ -13,6 +13,7 @@ import { glob } from 'astro/loaders';
   images:                      # images de la page projet, dans l'ordre
     - "./vibe-art/01.jpg"
     - "./vibe-art/02.jpg"
+    - "/work/vibe-art/film.mp4"   # vidéo : fichier dans public/, muette, en boucle ; poster = même nom en .jpg
   draft: false                 # true = projet masqué du site
   order: 1                     # optionnel : force la position dans la grille
   ---
@@ -27,7 +28,9 @@ const work = defineCollection({
       service: z.string(),
       date: z.coerce.date(),
       cover: z.union([image(), z.string().url()]),
-      images: z.array(z.union([image(), z.string().url()])).default([]),
+      images: z
+        .array(z.union([image(), z.string().url(), z.string().regex(/^\/.+\.(mp4|webm)$/)]))
+        .default([]),
       draft: z.boolean().default(false),
       order: z.number().optional(),
     }),

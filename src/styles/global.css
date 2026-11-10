@@ -98,7 +98,8 @@ h1, h2, h3, p { margin: 0; font-size: inherit; font-weight: inherit; line-height
 .wl-images { min-width: 0; }
 .wl-fig { position: relative; margin: 0 0 24px; scroll-margin-top: var(--wl-top); }
 .wl-fig:last-child { margin-bottom: 0; }
-.wl-fig img { width: 100%; height: auto; background: #f2f2f2; }
+.wl-fig img,
+.wl-fig video { display: block; width: 100%; height: auto; background: #f2f2f2; }
 .wl-num {
   display: block; margin: 0 0 6px;
   font-size: 11px; line-height: 1; letter-spacing: .04em; color: var(--wl-muted);
