@@ -13,7 +13,6 @@ images:
   - "./la-table-dor/03.jpg"
   - "./la-table-dor/04.jpg"
   - "./la-table-dor/05.jpg"
-  - "./la-table-dor/06.jpg"
 draft: false
 ---
 
