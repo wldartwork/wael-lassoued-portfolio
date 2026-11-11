@@ -6,11 +6,12 @@ date: 2025-06-01
 order: 5
 cover: "./tech-talk/cover.jpg"
 images:
-  - "/work/tech-talk/logo.mp4"
-  - "/work/tech-talk/cables.mp4"
-  - "./tech-talk/01.jpg"
   - "/work/tech-talk/teaser.mp4"
+  - "./tech-talk/01.jpg"
+  - "/work/tech-talk/logo.mp4"
   - "./tech-talk/02.jpg"
+  - "/work/tech-talk/cables.mp4"
+  - "./tech-talk/03.jpg"
 draft: false
 ---
 
