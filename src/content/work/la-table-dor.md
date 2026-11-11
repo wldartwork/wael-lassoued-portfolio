@@ -6,14 +6,14 @@ date: 2026-04-15
 order: 4
 cover: "./la-table-dor/cover.jpg"
 images:
+  - "/work/la-table-dor/mark.mp4"
+  - "/work/la-table-dor/social.mp4"
   - "./la-table-dor/01.jpg"
   - "./la-table-dor/02.jpg"
-  - "/work/la-table-dor/mark.mp4"
   - "./la-table-dor/03.jpg"
   - "./la-table-dor/04.jpg"
   - "./la-table-dor/05.jpg"
   - "./la-table-dor/06.jpg"
-  - "/work/la-table-dor/social.mp4"
 draft: false
 ---
 
