@@ -14,7 +14,6 @@ images:
   - "./pop-shop/06.jpg"
   - "./pop-shop/07.jpg"
   - "./pop-shop/08.jpg"
-  - "./pop-shop/09.jpg"
 draft: false
 ---
 
