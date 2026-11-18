@@ -7,12 +7,15 @@ order: 1
 cover: "./souvenirs/cover.jpg"
 images:
   - "./souvenirs/01.jpg"
-  - "./souvenirs/02.jpg"
+  - "/work/souvenirs/flowers.mp4"
   - "./souvenirs/03.jpg"
   - "./souvenirs/04.jpg"
   - "./souvenirs/05.jpg"
   - "./souvenirs/06.jpg"
   - "./souvenirs/07.jpg"
+  - "./souvenirs/08.jpg"
+  - "./souvenirs/09.jpg"
+  - "./souvenirs/10.jpg"
 draft: false
 ---
 
