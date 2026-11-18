@@ -3,7 +3,7 @@ title: "Stil Park"
 client: "Stil Park"
 service: "Brand identity · Art direction · Digital"
 date: 2026-10-01
-order: 3
+order: 5
 cover: "./stil-park/cover.jpg"
 images:
   - "./stil-park/01.jpg"

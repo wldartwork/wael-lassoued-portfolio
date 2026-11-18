@@ -3,7 +3,7 @@ title: "Tech&Talk"
 client: "Louis Vuitton Malletier · Internal media"
 service: "Media identity · Motion · Art direction"
 date: 2025-06-01
-order: 5
+order: 7
 cover: "./tech-talk/cover.jpg"
 images:
   - "/work/tech-talk/teaser.mp4"

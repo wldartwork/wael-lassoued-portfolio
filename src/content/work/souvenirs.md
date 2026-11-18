@@ -3,7 +3,7 @@ title: "Souvenirs"
 client: "Louis Vuitton · Graduation project"
 service: "Art direction · Packaging · Editorial"
 date: 2025-06-15
-order: 1
+order: 3
 cover: "./souvenirs/cover.jpg"
 images:
   - "./souvenirs/01.jpg"

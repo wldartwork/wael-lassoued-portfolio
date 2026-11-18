@@ -3,7 +3,7 @@ title: "POP SHOP"
 client: "POP SHOP · Paris"
 service: "Brand identity · Packaging · Retail"
 date: 2026-09-15
-order: 2
+order: 4
 cover: "./pop-shop/cover.jpg"
 images:
   - "./pop-shop/01.jpg"

@@ -3,7 +3,7 @@ title: "La Table d'Or"
 client: "La Table d'Or · Le Bourget"
 service: "Brand identity · Art direction · Social"
 date: 2026-04-15
-order: 4
+order: 6
 cover: "./la-table-dor/cover.jpg"
 images:
   - "/work/la-table-dor/mark.mp4"

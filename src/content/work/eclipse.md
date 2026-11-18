@@ -3,7 +3,7 @@ title: "Eclipse"
 client: "WLD Artwork · Own product"
 service: "Product design · Packaging · Art direction"
 date: 2026-08-01
-order: 6
+order: 8
 cover: "./eclipse/cover.jpg"
 images:
   - "./eclipse/01.jpg"
