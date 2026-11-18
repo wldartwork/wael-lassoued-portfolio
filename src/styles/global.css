@@ -146,6 +146,11 @@ h1, h2, h3, p { margin: 0; font-size: inherit; font-weight: inherit; line-height
 .footer-grid { display: flex; justify-content: space-between; gap: 24px; }
 .footer-links { display: flex; gap: 16px; }
 
+/* ---------- ORDINATEUR : textes plus grands ---------- */
+@media (min-width: 768px) {
+  :root { --wl-label: 14px; }
+}
+
 /* ---------- MOBILE ---------- */
 @media (max-width: 767px) {
   :root { --wl-top: 24px; }
